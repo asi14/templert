@@ -1,0 +1,33 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#wrapper {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background: #2B76E2;
+   padding:20px;
+   height: 30px;
+   font-family: Roboto;
+   font-weight: 900;
+   font-size: 25px;
+   color: white;
+}
+#profilee {
+	background: #DFE3E8;
+	padding: 10px;
+	font-family: Roboto;
+	color: white;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
+}
+#content {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+   font-family: Roboto;
+}
