@@ -1,0 +1,2 @@
+If you are using Windows 7 or above, you may encounter an error related to COMDLG32. To fix it, please read the following:
+http://www.walkernews.net/2012/10/20/how-to-fix-windows-8-comdlg32-ocx-file-missing-error/

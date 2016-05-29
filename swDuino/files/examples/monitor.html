@@ -1,0 +1,66 @@
+<html>
+
+ <head>
+
+  <title>Example - Monitor</title>
+
+  <script src="../standard/swduino.basic.js"></script>
+
+  <link rel="stylesheet" href="../standard/style.css" />
+
+ </head>
+
+ <body>
+
+  <h1>Example: Monitor</h1>
+  <p>
+   In this example, you will learn to monitor POT value by displaying it on web browser.<br/>
+   For more information <a href='http://www.swduino.com/?tab=examples&doc=monitor' target='_blank'>click here</a>.
+  </p>
+
+  <h2>Hardware</h2>
+  <p>
+- Get an Arduino board, POT and few jumpers<br/>
+- Connect a POT at analog pin# A0<br/>
+- Connect Arduino board with computer
+  </p>
+
+  <h2>Sketch</h2>
+  <p>
+- Open Arduino IDE<br/>
+- Install <a href="http://www.swduino.com/?tab=library">swDuino Arduino library</a> (if not yet installed)<br/>
+- Open example: Files &gt; Examples &gt; swDuino-Lib &gt; <a href="http://www.swduino.com/downloads/write.ino" target="_blank">write</a> sketch<br/>
+- Upload it to Arduino board
+  </p>
+
+  <h2>swDuino</h2>
+  <p>
+- Open swDuino<br/>
+- Configure Serial/COM and HTTP/Web server (optional)<br/>
+- Start swDuino Server<br/>
+  </p>
+
+  <h2>Output</h2>
+  <p>
+   <ul>
+    <li>State of POT when this page was loaded: <span id="P1" class="highlight">...</span>. To update this value, rotate the knob of POT and refresh this page.</li>
+    <li>Current state of POT: <span id="P2" class="highlight">...</span>. To update this value, rotate the knob of POT and click this button: <input type=button onclick="swduino_get('P','P2');" value="Refresh" /></li>
+    <li>On clicking the following button, an alert will be displayed showing the percentage of POT knob rotated. This explains how a custom function can be invoked on receiving the response: <input type=button onclick="swduino_get('P','','somefunction');" value="How much rotated!" /></li>
+   </ul>
+  </p>
+
+ <script>
+
+	swduino_get("P","P1");
+
+	function somefunction(value)
+	{
+		var s = "The POT is " + Math.round(value/1023*100) + "% rotated."
+		alert(s);
+	}
+
+ </script>
+
+ </body>
+
+</html>

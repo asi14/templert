@@ -1,0 +1,58 @@
+<html>
+
+ <head>
+
+  <title>Example - Monitor (steaming)</title>
+
+  <script src="../standard/swduino.stream.js"></script>
+
+  <link rel="stylesheet" href="../standard/style.css" />
+
+ </head>
+
+ <body>
+
+  <h1>Example - Monitor (steaming)</h1>
+  <p>
+   In this example, you will learn to monitor POT value by displaying it on web browser. Note that, the values will be updated on streaming.<br/>
+   For more information <a href='http://www.swduino.com/?tab=examples&doc=monitor_stream' target='_blank'>click here</a>.
+  </p>
+
+  <h2>Hardware</h2>
+  <p>
+- Get an Arduino board, POT and few jumpers<br/>
+- Connect a POT at analog pin# A0<br/>
+- Connect Arduino board with computer
+  </p>
+
+  <h2>Sketch</h2>
+  <p>
+- Open Arduino IDE<br/>
+- Install <a href="http://www.swduino.com/?tab=library">swDuino Arduino library</a> (if not yet installed)<br/>
+- Open example: Files &gt; Examples &gt; swDuino-Lib &gt; <a href="http://www.swduino.com/downloads/write.ino" target="_blank">write</a> sketch<br/>
+- Upload it to Arduino board.
+  </p>
+
+  <h2>swDuino</h2>
+  <p>
+- Open swDuino<br/>
+- Configure Serial/COM and HTTP/Web server (optional)<br/>
+- Start swDuino Server<br/>
+  </p>
+
+  <h2>Output</h2>
+  <p>
+   <ul>
+    <li>State of POT: <span id="P1" class="highlight">...</span>. To update this value, rotate the knob of POT.</li>
+   </ul>
+  </p>
+
+ <script>
+
+	swduino_stream("P","P1");
+
+ </script>
+
+ </body>
+
+</html>
