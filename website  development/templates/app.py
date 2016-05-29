@@ -1,12 +1,9 @@
-from flask import Flask, render_template
-
+from flask import Flask
 app = Flask(__name__)
 
-@app.route('/../../website\ development/')
-@app.route('/../../website\ development/<name/>')
-def index(name=None):
-    #return send_from_directory('html', '../../website\ development/index.html')
-    return render_template('index.html', name=name);
+@app.route("/")
+def index():
+    return "Index Page"
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
